@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
-
 // Post model for CRUD
 let Post = require('../models/post');
+
 
 /* GET: /posts => show main blog page */
 router.get('/', async (req, res) => {
@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/:_id', async (req, res) => {
     let post = await Post.findById(req.params._id);
     res.render('posts/details', {
+        title: post.title,
         post: post
     });
 });
