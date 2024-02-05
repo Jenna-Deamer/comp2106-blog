@@ -1,0 +1,12 @@
+<section class="row postCard">
+  {{#each posts}}
+    <h5>{{this.title}}</h5>
+    <p>{{this.body}}</p>
+    <p>Posted:
+      <span class="badge text-bg-secondary">{{this.date}} </span>
+      by
+      {{this.username}}
+    </p>
+    <a href="/posts" class="btn btn-info"> Go Back</a>
+  {{/each}}
+</section>

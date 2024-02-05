@@ -1,0 +1,13 @@
+<h1>Our Lastest Random Thoughts</h1>
+<section class="row postCard">
+  {{#each posts}}
+    <h5>{{this.title}}</h5>
+    <p>{{this.body}}</p>
+    <p>Posted:
+      <span class="badge text-bg-secondary">{{this.date}} </span>
+      by
+      {{this.username}}
+    </p>
+    <a href="/posts/{{this._id}}" class="btn btn-info">Read More</a>
+  {{/each}}
+</section>
