@@ -1,0 +1,18 @@
+<h1>Edit Post</h1>
+<form method="post">
+  <fieldset>
+    <label for="title">Title: *</label>
+    <input name="title" id="title" required value="{{post.title}}" />
+  </fieldset>
+  <fieldset><label for="body">Body: *</label>
+    <textarea name="body" id="body" required>{{post.body}}</textarea>
+  </fieldset>
+  <fieldset>
+    <label for="username">Username: *</label>
+    <input name="username" id="username" required value="{{post.username}}" />
+  </fieldset>
+  <button class="btn btn-info offset-4">
+    <i class="bi bi-plus-circle"></i>
+    Save
+  </button>
+</form>

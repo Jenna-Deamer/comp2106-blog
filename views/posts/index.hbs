@@ -1,13 +1,28 @@
 <h1>Our Lastest Random Thoughts</h1>
-<section class="row postCard">
+<a href="/posts/create" class="btn btn-info mb-3">
+  <i class="bi bi-plus-circle"></i>
+  Create New Post
+</a>
+
+<form method="post">
+  <input type="search" id="site-search" name="q" />
+  <button class="btn btn-info">Search</button>
+</form>
+
+<ul class="list-group">
   {{#each posts}}
-    <h5>{{this.title}}</h5>
-    <p>{{this.body}}</p>
-    <p>Posted:
-      <span class="badge text-bg-secondary">{{this.date}} </span>
-      by
-      {{this.username}}
-    </p>
-    <a href="/posts/{{this._id}}" class="btn btn-info">Read More</a>
+    <li class="list-group-item">
+      <h5><i class="bi bi-substack"></i> {{this.title}}</h5>
+      <p>{{this.body}}</p>
+      <p>Posted:
+        <span class="badge text-bg-secondary">{{this.date}} </span>
+        by
+        {{this.username}}
+      </p>
+      <a href="/posts/details/{{this._id}}" class="btn btn-info float-end">
+        <i class="bi bi-book"></i>
+        Read More
+      </a>
+    </li>
   {{/each}}
-</section>
+</ul>

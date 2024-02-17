@@ -1,4 +1,37 @@
-.postCard {
-    border-style: solid 1px darkgrey;
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    font: 14px "Lora", serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.row {
+    border-style: solid 1px;
+    border-color: darkgray;
     margin: 5px;
+}
+
+.list-group-item {
+    margin-bottom: 15px;
+}
+
+fieldset {
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 600px;
+    height: 250px;
+}
+
+input {
+    width: 600px;
+}
+
+label {
+    width: 85px;
+    vertical-align: top;
 }

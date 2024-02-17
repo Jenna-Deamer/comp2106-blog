@@ -1,10 +1,23 @@
-<section class="row postCard">
-  <h1>{{post.title}}</h1>
-  <p>{{post.body}}</p>
-  <p>Posted:
-    <span class="badge text-bg-secondary">{{post.date}} </span>
-    by
-    {{post.username}}
-  </p>
-  <a href="/posts" class="btn btn-info">View all posts</a>
-</section>
+<h1>{{post.title}}</h1>
+{{post.body}}
+<p>Posted:
+  <span class="badge text-bg-secondary">{{post.date}} </span>
+  by
+  {{post.username}}
+</p>
+<a href="/posts" class="btn btn-info">
+  <i class="bi bi-skip-backward-fill"></i>
+  Back to Blog
+</a>
+<a href="/posts/edit/{{post._id}}" class="btn btn-info">
+  <i class="bi bi-pencil-square"></i>
+  Edit
+</a>
+<a
+  href="/posts/delete/{{post._id}}"
+  class="btn btn-danger"
+  onclick="return confirm('Are you sure you want to delete this?');"
+>
+  <i class="bi bi-x-circle"></i>
+  Delete
+</a>
