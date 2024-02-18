@@ -4,10 +4,11 @@
   Create New Post
 </a>
 
-<form method="post">
-  <input type="search" id="site-search" name="q" />
-  <button class="btn btn-info">Search</button>
+<form action="/posts/search" method="POST">
+    <input type="text" name="searchQuery" placeholder="Search...">
+    <button type="submit">Search</button>
 </form>
+
 
 <ul class="list-group">
   {{#each posts}}
